@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Spaceship.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Gray-Walls.png" type="Texture" id=2]
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="TileSet" id=1]
+0/name = "Gray-Walls.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 64, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 2 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[node name="TestLevel" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+format = 1
+tile_data = PoolIntArray( -262143, 0, 0, -262142, 0, 0, -262141, 0, 0, -262140, 0, 0, -262139, 0, 0, -262138, 0, 0, -262137, 0, 0, -131074, 0, 0, -131073, 0, 0, -196608, 0, 0, -196607, 0, 0, -196600, 0, 0, -196599, 0, 0, -196598, 0, 0, -196597, 0, 0, -65540, 0, 0, -65539, 0, 0, -65538, 0, 0, -131061, 0, 0, -131060, 0, 0, -131059, 0, 0, -6, 0, 0, -5, 0, 0, -4, 0, 0, -65523, 0, 0, -65522, 0, 0, 65529, 0, 0, 65530, 0, 0, 14, 0, 0, 15, 0, 0, 131065, 0, 0, 65551, 0, 0, 196601, 0, 0, 131087, 0, 0, 262137, 0, 0, 196623, 0, 0, 327673, 0, 0, 262159, 0, 0, 393209, 0, 0, 327695, 0, 0, 458745, 0, 0, 393231, 0, 0, 524281, 0, 0, 524282, 0, 0, 458766, 0, 0, 458767, 0, 0, 589818, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 655354, 0, 0, 655355, 0, 0, 655356, 0, 0, 655357, 0, 0, 589835, 0, 0, 589836, 0, 0, 720893, 0, 0, 720894, 0, 0, 720895, 0, 0, 655360, 0, 0, 655370, 0, 0, 655371, 0, 0, 720896, 0, 0, 720897, 0, 0, 720898, 0, 0, 720904, 0, 0, 720905, 0, 0, 720906, 0, 0, 786434, 0, 0, 786435, 0, 0, 786436, 0, 0, 786437, 0, 0, 786438, 0, 0, 786439, 0, 0, 786440, 0, 0 )
+
+[node name="Spaceship" parent="." instance=ExtResource( 1 )]
+position = Vector2( 322, 318 )

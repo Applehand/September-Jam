@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 15.1327
+
+[node name="Projectile" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+
+[node name="Hitbox" type="Area2D" parent="."]
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2( 80, 0 )
+shape = SubResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
